@@ -29,7 +29,7 @@ def binary_search_iterative(arr: list[int], goal: int) -> int:
     # goal is not in arr
     return -1
 
-def binary_search_recursive(arr: list[int], goal: int, lo: int = 0, hi: int = len(arr) - 1) -> int:
+def binary_search_recursive(arr: list[int], goal: int, lo: int = 0, hi: int = None) -> int:
     """Returns the index of goal within list. If goal does not exist within the list, returns -1.
     This function should not be called with lo or hi parameters; calling with anything other than default values for lo and hi will likely return an incorrect result
 
@@ -45,6 +45,11 @@ def binary_search_recursive(arr: list[int], goal: int, lo: int = 0, hi: int = le
     :rtype: int
     :return: The index of goal within the list if it exists; if not, -1
     """
+    # set default parameter
+    if (hi is None):
+        hi = len(arr) - 1
+
+    # binary search
     if (lo <= hi):
         mid: int = lo + ((hi - lo) // 2)
 
