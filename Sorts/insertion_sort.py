@@ -2,11 +2,11 @@
 # Time complexity: O(n^2) [worst/avg]; O(n) [best; list already sorted]
 # Space complexity: O(1)
 
-def insertion_sort(arr: list[int]) -> None:
+def insertion_sort(arr: List[int]) -> None:
     """Performs insertion sort in-place on parameter list of integers.
     
     :param arr: The list of ints to sort
-    :type arr: list[int]
+    :type arr: List[int]
 
     :rtype: None
     :return: None
