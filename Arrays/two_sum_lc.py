@@ -19,9 +19,8 @@ def two_sum_lc(nums: List[int], target: int) -> List[int]:
     """
     seen_num_map: {int: int} = {}
 
-    for i in range(0, len(nums)):
-        num: int = nums[i]
-        diff: int = # the number we need to make this num add up to target
+    for i, n in enumerate(nums):
+        diff: int = target - n # the number we need to make this num add up to target
 
         if diff in seen_num_map:
             return [seen_num_map[diff], i]
