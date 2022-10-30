@@ -2,7 +2,7 @@
 # Leetcode 217
 # https://leetcode.com/problems/contains-duplicate/
 
-def contains_duplicate(nums: List[int]) -> bool:
+def contains_duplicate_lc(nums: List[int]) -> bool:
     """Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
 
     :param arr: The list of ints to search
