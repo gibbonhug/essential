@@ -44,15 +44,4 @@ def reverse_linked_list_recursivelc206(head: Optional[ListNode]) -> Optional[Lis
     :rtype: Optional[ListNode]
     :return: The new head of the reverse linked list (tail of the old list)
     """
-    prev_node: None
-    this_node: ListNode = head
-
-    while (this_node):
-        temp_node = this_node.next
-        this_node.next = prev_node
-
-        prev_node = this_node
-        this_node = temp_node
     
-    # this_node will now be None and prev_node will now be old tail
-    return prev_node 
