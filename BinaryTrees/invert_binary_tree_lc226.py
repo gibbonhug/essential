@@ -9,7 +9,7 @@ class TreeNode:
          self.left = left
          self.right = right
 
-def invert_binary_tree_recursive_lc226(root: Optional[TreeNode]) -> Optional[TreeNode]:
+def invert_binary_tree_lc226_recursive(root: Optional[TreeNode]) -> Optional[TreeNode]:
     """Given the root of a binary tree, invert the tree, and return its root.
 
     :param root: The root node of the binary tree to invert

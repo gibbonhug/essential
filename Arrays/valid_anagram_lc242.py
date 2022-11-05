@@ -2,7 +2,7 @@
 # Leetcode 242
 # https://leetcode.com/problems/valid-anagram/
 
-def valid_anagram_hashmap_lc242(s: str, t: str) -> bool:
+def valid_anagram_lc242_hashmap(s: str, t: str) -> bool:
     """Given two strings s and t, return true if t is an anagram of s, and false otherwise.
 
     An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
@@ -36,7 +36,7 @@ def valid_anagram_hashmap_lc242(s: str, t: str) -> bool:
     return (s_map == t_map)
 
 # unfinished
-def valid_anagram_sort_lc242(s: str, t: str) -> bool:
+def valid_anagram_lc242_sort(s: str, t: str) -> bool:
     """Given two strings s and t, return true if t is an anagram of s, and false otherwise.
 
     An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
