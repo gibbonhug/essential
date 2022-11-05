@@ -25,7 +25,7 @@ def valid_anagram_hashmap_lc242(s: str, t: str) -> bool:
     s_map: {str: int} = {} 
     t_map: {str: int} = {}
 
-    for i in range(0, len(s)):
+    for i in range(len(s)):
         s_char: str = s[i]
         t_char: str = t[i]
 
@@ -35,6 +35,7 @@ def valid_anagram_hashmap_lc242(s: str, t: str) -> bool:
 
     return (s_map == t_map)
 
+# unfinished
 def valid_anagram_sort_lc242(s: str, t: str) -> bool:
     """Given two strings s and t, return true if t is an anagram of s, and false otherwise.
 
@@ -50,4 +51,6 @@ def valid_anagram_sort_lc242(s: str, t: str) -> bool:
     :rtype: bool
     :return: Boolean value corresponding to whether strings s and t are anagrams
     """
+    s.sort()
+
     return False
