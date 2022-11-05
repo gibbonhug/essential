@@ -3,11 +3,11 @@
 # https://leetcode.com/problems/invert-binary-tree/
 
 # Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
+class TreeNode:
+     def __init__(self, val=0, left=None, right=None):
+         self.val = val
+         self.left = left
+         self.right = right
 
 def invert_binary_tree_recursive_lc226(root: Optional[TreeNode]) -> Optional[TreeNode]:
     """Given the root of a binary tree, invert the tree, and return its root.
