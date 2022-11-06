@@ -37,12 +37,36 @@ class LinkedList:
 
     Methods
     -------
-    calc_length()
+    add_at_beginning(new_head):
+        add a new head to the list, and return the new head
+
+    remove_first_node():
+        remove the current head of the list, and return the new head if it exists
+
+    calc_length():
         manually calculate and return length of the list
     """
     def __init__(self, head: Node):
         self.head = head
         self.length = self.calc_length()
+
+    def add_at_beginning(self, new_head: Node) -> Node:
+        new_head.next = self.head
+        self.head = new_head
+
+        self.length += 1
+
+        return new_head
+
+    def remove_first_node(self) -> Union[Node, None]:
+        if (self.head):
+            self.head = self.head.next
+
+            self.length -= 1
+
+            return self.head
+        
+        return None
 
     def calc_length(self) -> int:
         length = 0
