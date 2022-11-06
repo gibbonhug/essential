@@ -13,8 +13,8 @@ def valid_palindrome_lc243(s: str) -> bool:
     :rtype: bool
     :return: Boolean value corresponding to whether strings s is a palindrome, with regard to its alphanumeric chars
     """
-    left = 0
-    rite = len(s) - 1
+    left: int = 0
+    rite: int = len(s) - 1
 
     while left <= rite:
         while left <= rite and not s[left].isalnum():
