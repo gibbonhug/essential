@@ -5,7 +5,7 @@ from linked_list import Node
 # Leetcode 206
 # https://leetcode.com/problems/reverse-linked-list/
 
-def reverse_linked_listlc206(head: Optional[Node]) -> Optional[Node]:
+def reverse_linked_list_lc206(head: Optional[Node]) -> Optional[Node]:
     """Given the head of a singly linked list, reverse the list, and return the reversed list.
 
     :param head: The head of the linked list to reverse
@@ -27,7 +27,7 @@ def reverse_linked_listlc206(head: Optional[Node]) -> Optional[Node]:
     # this_node will now be None and prev_node will now be old tail
     return prev_node 
 
-def reverse_linked_list_recursivelc206(head: Optional[Node]) -> Optional[Node]:
+def reverse_linked_list_recursive_lc206(head: Optional[Node]) -> Optional[Node]:
     """Given the head of a singly linked list, reverse the list, and return the reversed list.
 
     Recursive implementation

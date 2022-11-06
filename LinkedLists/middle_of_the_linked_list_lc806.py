@@ -18,6 +18,7 @@ def middle_of_the_linked_list_lc806(head: Node) -> Node:
     slow_node: Node = head
     fast_node: Node = head
 
+    # once the pointer advancing twice as fast hits the end of the list, the slower will be at the middle
     while fast_node and fast_node.next:
         slow_node = slow_node.next
         fast_node = fast_node.next.next
