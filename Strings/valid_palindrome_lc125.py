@@ -38,7 +38,7 @@ def valid_palindrome_recursive_lc243(s: str) -> bool:
 
     Given a string s, return true if it is a palindrome, or false otherwise.
 
-    Recursive implementation.
+    Recursive implementation. Exceeds timelimit, likely due to stripping non-alphanumerics.
 
     :param s: The string to determine whether palindrome
     :type s: str
