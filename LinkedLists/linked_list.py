@@ -1,3 +1,5 @@
+from typing import optional
+
 class Node:
     """
     A class used to represent a singly-linked Node with integer data
@@ -58,7 +60,7 @@ class LinkedList:
 
         return new_head
 
-    def remove_first_node(self) -> Union[Node, None]:
+    def remove_first_node(self) -> Optional[Node]:
         if (self.head):
             self.head = self.head.next
 
