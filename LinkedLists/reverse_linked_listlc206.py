@@ -44,4 +44,20 @@ def reverse_linked_list_recursivelc206(head: Optional[ListNode]) -> Optional[Lis
     :rtype: Optional[ListNode]
     :return: The new head of the reverse linked list (tail of the old list)
     """
+    # head is None: nothing to reverse (passed empty list)
+    if not head:
+        return None
     
+    new_head = head
+
+    # if there are nodes after this node, reverse following portion of LL
+    if head.next:
+        new_head = reverse_linked_list_recursivelc206(head.next)
+        # reversal
+        head.next.next = head
+    
+    # on last call this will make original head of list be followed by None
+    head.next = None 
+    
+    # on last call this will return original last node in list
+    return new_head
