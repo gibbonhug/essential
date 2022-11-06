@@ -1,4 +1,4 @@
-from typing import optional
+from typing import Optional
 
 class Node:
     """
