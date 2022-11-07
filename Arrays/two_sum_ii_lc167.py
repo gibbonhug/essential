@@ -1,5 +1,5 @@
 # Two Sum II
-# Leetcode 67
+# Leetcode 167
 # https://leetcode.com/problems/two-sum/
 
 def two_sum__ii_lc167(nums: List[int], target: int) -> List[int]:
