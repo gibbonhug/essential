@@ -17,7 +17,8 @@ def consecutive_subarrays_by_element_flat(arr: list[int]) -> list[int]:
     # (first iteration will check subarrays starting at 0th element, then 1st, etc)
     for i in range(0, len(arr)):
         values_from_here: list[int] = []
-        # 'j' will determine the length of this subarray
+        # 'j' will determine the length of this subarray; that is, however
+        # many elements after 'i' we add
         # (first iteration will give length of 1, then 2, etc)
         for j in range(0, len(arr) - i):
             this_subarray: list[int] = values_from_here[:] # copy by value not reference
@@ -46,7 +47,8 @@ def consecutive_subarrays_by_element_structured(arr: list[int]) -> list[int]:
     # (first iteration will check subarrays starting at 0th element, then 1st, etc)
     for i in range(0, len(arr)):
         subarrays_starting_here: list[int] = []
-        # 'j' will determine the length of this subarray
+        # 'j' will determine the length of this subarray; that is, however
+        # many elements after 'i' we add
         # (first iteration will give length of 1, then 2, etc)
         for j in range(0, len(arr) - i):
             this_subarray: list[int] = []
