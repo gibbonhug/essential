@@ -2,7 +2,7 @@
 # Leetcode 1
 # https://leetcode.com/problems/two-sum/
 
-def two_sum_lc1(nums: List[int], target: int) -> List[int]:
+def two_sum_lc1(nums: list[int], target: int) -> list[int]:
     """Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
 
     You may assume that each input would have exactly one solution, and you may not use the same element twice.
@@ -13,12 +13,12 @@ def two_sum_lc1(nums: List[int], target: int) -> List[int]:
     Space complexity: O(n)
 
     :param nums: The list of nums to search
-    :type nums: List[int]
+    :type nums: list[int]
     :param nums: The target value
     :type nums: int
 
-    :rtype: List[int]
-    :return: List containing the 2 indices in nums with values that sum to target
+    :rtype: list[int]
+    :return: list containing the 2 indices in nums with values that sum to target
     """
     seen_num_map: {int: int} = {}
 

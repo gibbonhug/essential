@@ -10,7 +10,7 @@ def consecutive_zero_sum(nums: list[int]) -> int:
     Space complexity: O(n) [new hashmap and array]
 
     :param nums: The list of nums
-    :type nums: List[int]
+    :type nums: list[int]
 
     :rtype: int
     :return: Size of the longest consecutive sequence in nums which sums to 0
