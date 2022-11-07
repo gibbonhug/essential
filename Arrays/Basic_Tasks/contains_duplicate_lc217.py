@@ -1,3 +1,5 @@
+# Basic Task: Determine whether an array contains a duplicate entry
+
 # Contains duplicate
 # Leetcode 217
 # https://leetcode.com/problems/contains-duplicate/
