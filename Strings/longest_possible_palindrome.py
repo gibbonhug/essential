@@ -1,5 +1,5 @@
 def longest_possible_palindrome(strs: List[str]) -> int:
-    """Given a list of two-character-long strings, determine the size of the longest possible palindrome that can be formed from these strings. Each string can occur more than once, and can be used at most however many times it appears in strs.
+    """Given a list of two-character-long strings, determine the size of the longest possible palindrome that can be formed from these strings. Each string can occur more than once in strs, and can be used to form palindrome at most however many times it appears in strs.
 
     strs = ["aa", "aa", "bb", "lf", "lf", "fl"] -> 10, because longest possible palindrome would be "flaabbaalf" or similar, which is 10 characters long.
     strs = ["aa"] -> 2, because longest possible palindrome "aa" is 2 chars
