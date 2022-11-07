@@ -1,3 +1,5 @@
+# Basic Task: Cumulatively sum the elements in an array, starting from the beginning
+
 def cumulative_sum_array(nums: list[int]) -> list[int]:
     """Given a list of nums, return a list which represents the cumulative sum in nums at that index
 
