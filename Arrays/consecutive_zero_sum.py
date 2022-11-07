@@ -26,7 +26,6 @@ def consecutive_zero_sum(nums: list[int]) -> int:
     cuum_sum_list: list[int] = [nums[0]]
     longest_zero_sum_from_beginning: int = 1 if cuum_sum_list[0] == 0 else -1
 
-
     for i in range(1, len(nums)):
         cuum_sum_here = nums[i] + cuum_sum_list[i-1]
         cuum_sum_list.insert(i, cuum_sum_here)
@@ -34,8 +33,10 @@ def consecutive_zero_sum(nums: list[int]) -> int:
         if cuum_sum_here == 0:
             longest_zero_sum_from_beginning = i+1 # 0 indexed array, length will be index +1
 
+    print(str(cuum_sum_list))
+
     # next find consecutive 0 sums which do not start from index 0.
-    # (these can be found by summing reflecting numbers in cuum_sum_list: ie from [-1, 3, 1] summing from these indices
+    # (these can be found by summing between equal numbers in cuum_sum_list: ie from [1, 3, 1] summing from these indices
     # gives a consecutive zero sum of length 3)
     # finding opposite in this way is nearly identical to two sum hashmap version leetcode also in Arrays.
     seen_sum_map: {int: int} = {}
@@ -44,9 +45,9 @@ def consecutive_zero_sum(nums: list[int]) -> int:
     for i in range(0, len(cuum_sum_list)):
         this_cuum_sum = cuum_sum_list[i]
 
-        if (this_cuum_sum * -1) in seen_sum_map:
-            this_length = i - seen_sum_map.get(this_cuum_sum * -1)
-            # max func will eliminate issues of ex. multiple cuum_sums surrounded by same number (eg [-1, 2, 1] and [1, 7, 3, -1] will find 4 as larger)
+        if this_cuum_sum in seen_sum_map:
+            this_length = i - seen_sum_map.get(this_cuum_sum)
+            # only adding cuum sum into the map once (below else statement) will eliminate issues of ex. multiple cuum_sums surrounded by same number
             longest_zero_sum_from_mid = max(this_length, longest_zero_sum_from_mid) 
 
         else:
