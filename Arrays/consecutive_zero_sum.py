@@ -24,14 +24,14 @@ def consecutive_zero_sum(nums: list[int]) -> int:
     # first build cuum sum array while finding longest cons zero sum which starts from beginning of list.
     # building the cuum sum array is equivalent to cumulative_sum_array in Arrays/Basic_Tasks.
     cuum_sum_list: list[int] = [nums[0]]
-    longest_zero_sum_from_beginning: int = 1 if cuum_sum_list[0] == 0 else -1
+    longest_zero_sum_from_beg: int = 1 if cuum_sum_list[0] == 0 else -1
 
     for i in range(1, len(nums)):
         cuum_sum_here = nums[i] + cuum_sum_list[i-1]
         cuum_sum_list.insert(i, cuum_sum_here)
 
         if cuum_sum_here == 0:
-            longest_zero_sum_from_beginning = i+1 # 0 indexed array, length will be index +1
+            longest_zero_sum_from_beg = i+1 # 0 indexed array, length will be index +1
 
     # next find consecutive 0 sums which do not start from index 0.
     # (these can be found by summing between equal numbers in cuum_sum_list: ie from [1, 3, 1] summing from these indices
@@ -52,4 +52,4 @@ def consecutive_zero_sum(nums: list[int]) -> int:
             seen_sum_map[this_cuum_sum] = i
     
     # now return the larger of the two sum lengths:
-    return max(longest_zero_sum_from_beginning, longest_zero_sum_from_mid)
+    return max(longest_zero_sum_from_beg, longest_zero_sum_from_mid)
