@@ -9,6 +9,9 @@ def middle_of_the_linked_list_lc806(head: Node) -> Node:
 
     If there are two middle nodes, return the second middle node.
 
+    Time complexity: O(n) [iterate over entire list]
+    Space complexity: O(1)
+
     :param head: The head of the linked list
     :type head: Node
 

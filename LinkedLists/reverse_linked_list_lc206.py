@@ -8,6 +8,9 @@ from linked_list import Node
 def reverse_linked_list_lc206(head: Optional[Node]) -> Optional[Node]:
     """Given the head of a singly linked list, reverse the list, and return the reversed list.
 
+    Time complexity: O(n) [iterate over entire list]
+    Space complexity: O(1)
+
     :param head: The head of the linked list to reverse
     :type head: Optional[Node]
 
@@ -31,6 +34,9 @@ def reverse_linked_list_recursive_lc206(head: Optional[Node]) -> Optional[Node]:
     """Given the head of a singly linked list, reverse the list, and return the reversed list.
 
     Recursive implementation
+
+    Time complexity: O(n) [iterate over entire list]
+    Space complexity: O(n) [recursive calls]
 
     :param head: The head of the linked list to reverse
     :type head: Optional[ListNode]

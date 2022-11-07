@@ -7,6 +7,9 @@ def group_anagrams_lc49(self, strs: List[str]) -> List[List[str]]:
 
     An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.  
 
+    Time complexity: O(
+    Space complexity: O(
+
     :param strs: The list of strings to search for group anagrams
     :type strs: List[str]
 

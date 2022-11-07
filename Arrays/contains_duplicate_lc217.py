@@ -5,6 +5,9 @@
 def contains_duplicate_lc217(nums: List[int]) -> bool:
     """Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
 
+    Time complexity: O(n)
+    Space complexity: O(n)
+
     :param arr: The list of ints to search
     :type nums: List[int]
 

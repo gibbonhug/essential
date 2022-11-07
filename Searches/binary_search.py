@@ -1,9 +1,10 @@
 # Binary Search (iterative and recursive implementations)
-# Time complexity: O(logn) [worst, avg]; O(1) [best: goal in mid of arr]
-# Space complexity: O(1)
 
 def binary_search_iterative(arr: List[int], goal: int) -> int:
     """Returns the index of goal within list. If goal does not exist within the list, returns -1.
+
+    Time complexity: O(logn) [worst, avg]; O(1) [best: goal in mid of arr]
+    Space complexity: O(1)
     
     :param arr: The list of ints to search
     :type arr: List[int]
@@ -32,6 +33,9 @@ def binary_search_iterative(arr: List[int], goal: int) -> int:
 def binary_search_recursive(arr: List[int], goal: int, lo: int = 0, hi: int = None) -> int:
     """Returns the index of goal within list. If goal does not exist within the list, returns -1.
     This function should not be called with lo or hi parameters; calling with anything other than default values for lo and hi will likely return an incorrect result
+
+    Time complexity: O(logn) [worst, avg]; O(1) [best: goal in mid of arr]
+    Space complexity: O(logn) [recursive calls]; O(1) [best: goal in mid of arr]
 
     :param arr: The list of ints to search
     :type arr: List[int]

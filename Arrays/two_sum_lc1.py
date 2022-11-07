@@ -9,6 +9,9 @@ def two_sum_lc1(nums: List[int], target: int) -> List[int]:
 
     You can return the answer in any order.
 
+    Time complexity: O(n)
+    Space complexity: O(n)
+
     :param nums: The list of nums to search
     :type nums: List[int]
     :param nums: The target value

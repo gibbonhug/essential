@@ -12,6 +12,9 @@ def merge_two_lists_lc21(list1: Optional[Node], list2: Optional[Node]) -> Option
 
     Return the head of the merged linked list.
 
+    Time complexity: O(n+m) [iterate over entire lists]
+    Space complexity: O(n+m) [new list containing all elements]
+
     :param list1: The head of the first linked list
     :type list1: Optional[Node]
     :param list2: The head of the second linked list
