@@ -1,10 +1,11 @@
 # Selection Sort (low to high)
-# Time complexity: O(n^2) [worst/avg]; O(n^2) [best]
-# Space complexity: O(1)
 
 def selection_sort(arr: List[int]) -> None:
     """Performs selection sort in-place on parameter list of integers.
     
+    Time complexity: O(n^2) [worst/avg]; O(n^2) [best]
+    Space complexity: O(1)
+
     :param arr: The list of ints to sort
     :type arr: List[int]
 

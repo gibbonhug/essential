@@ -1,10 +1,11 @@
 # Bubble Sort (low to high) [unoptimized]
-# Time complexity: O(n^2) [worst/avg]; O(n) [best: arr already sorted]
-# Space complexity: O(1)
 
 def bubble_sort(arr: List[int]) -> None:
     """Performs bubble sort in-place on parameter list of integers.
     
+    Time complexity: O(n^2) [worst/avg]; O(n) [best: arr already sorted]
+    Space complexity: O(1)
+
     :param arr: The list of ints to sort
     :type arr: List[int]
 

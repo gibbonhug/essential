@@ -11,6 +11,9 @@ def two_sum__ii_lc167(nums: List[int], target: int) -> List[int]:
 
     Your solution must use only constant extra space.   
 
+    Time complexity: O(nlogn) [sorting array]
+    Space complexity: O(1) [disregard sorting array]
+
     :param nums: The list of nums to search
     :type nums: List[int]
     :param nums: The target value

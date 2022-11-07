@@ -9,6 +9,9 @@ def valid_anagram_lc242_hashmap(s: str, t: str) -> bool:
 
     Hashmap Implementation
 
+    Time complexity: O(n) [iterate over an array]
+    Space complexity: O(len(s)) [make two hash maps when len(s) == len(t)]
+
     :param s: The first string
     :type s: str
     :param t: The second string
@@ -41,6 +44,9 @@ def valid_anagram_lc242_sort(s: str, t: str) -> bool:
     An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
 
     Sort String Implementation
+
+    Time complexity: O(nlogn) [sort string]
+    Space complexity: O(1)
     
     :param s: The first string
     :type s: str

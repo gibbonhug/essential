@@ -1,6 +1,9 @@
 def largest_even_sum(arr: List[int]) -> int:
     """Given an integer array arr, return the greatest possible even sum which can be summed from elements of arr.
 
+    Time complexity: O(nlogn) [sorting array]
+    Space complexity: O(1) [disregard sorting array]
+
     :param arr: The list of nums
     :type arr: List[int]
 

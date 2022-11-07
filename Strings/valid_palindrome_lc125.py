@@ -12,6 +12,9 @@ def valid_palindrome_lc243(s: str) -> bool:
     :param s: The string to determine whether palindrome
     :type s: str
 
+    Time complexity: O(len(s))
+    Space complexity: O(1)
+
     :rtype: bool
     :return: Boolean value corresponding to whether strings s is a palindrome, with regard to its alphanumeric chars
     """
@@ -38,7 +41,10 @@ def valid_palindrome_recursive_lc243(s: str) -> bool:
 
     Given a string s, return true if it is a palindrome, or false otherwise.
 
-    Recursive implementation. Exceeds timelimit, likely due to stripping non-alphanumerics.
+    Recursive implementation. Exceeds timelimit, due to stripping non-alphanumerics being slow.
+
+    Time complexity: O(1) [disregard stripping non-alphanumerics]
+    Space complexity: O(len(s)) [recursive calls] [disregard stripping non-alphanumerics]
 
     :param s: The string to determine whether palindrome
     :type s: str
