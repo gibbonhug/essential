@@ -34,9 +34,6 @@ def consecutive_zero_sum(nums: list[int]) -> int:
         if cuum_sum_here == 0:
             longest_zero_sum_from_beginning = i+1 # 0 indexed array, length will be index +1
 
-    print(cuum_sum_list)
-
-
     # next find consecutive 0 sums which do not start from index 0.
     # (these can be found by summing reflecting numbers in cuum_sum_list: ie from [-1, 3, 1] summing from these indices
     # gives a consecutive zero sum of length 3)
