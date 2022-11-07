@@ -1,6 +1,6 @@
 # Group Anagrams
 # Leetcode 49
-# https://leetcode.com/problems/two-sum/
+# https://leetcode.com/problems/group-anagrams/
 
 def group_anagrams_lc49(self, strs: List[str]) -> List[List[str]]:    
     """Given an array of strings strs, group the anagrams together. You can return the answer in any order.
@@ -13,4 +13,3 @@ def group_anagrams_lc49(self, strs: List[str]) -> List[List[str]]:
     :rtype: List[List[str]
     :return: List containing sublists which group anagrams together, eg [['cat', 'tac'], ['rat', 'tar', 'art']]
     """
-    
