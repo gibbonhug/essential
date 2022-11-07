@@ -24,14 +24,18 @@ def consecutive_zero_sum(nums: list[int]) -> int:
     # first build cuum sum array while finding longest cons zero sum which starts from beginning of list.
     # building the cuum sum array is equivalent to cumulative_sum_array in Arrays.
     cuum_sum_list: list[int] = [nums[0]]
-    longest_zero_sum_from_beginning: int = 0 if cuum_sum_list[0] == 0 else -1
+    longest_zero_sum_from_beginning: int = 1 if cuum_sum_list[0] == 0 else -1
+
 
     for i in range(1, len(nums)):
         cuum_sum_here = nums[i] + cuum_sum_list[i-1]
         cuum_sum_list.insert(i, cuum_sum_here)
 
         if cuum_sum_here == 0:
-            longest_zero_sum_from_beginning = i
+            longest_zero_sum_from_beginning = i+1 # 0 indexed array, length will be index +1
+
+    print(cuum_sum_list)
+
 
     # next find consecutive 0 sums which do not start from index 0.
     # (these can be found by summing reflecting numbers in cuum_sum_list: ie from [-1, 3, 1] summing from these indices
@@ -39,7 +43,7 @@ def consecutive_zero_sum(nums: list[int]) -> int:
     # finding opposite in this way is nearly identical to two sum hashmap version leetcode also in Arrays.
     seen_sum_map: {int: int} = {}
     longest_zero_sum_from_mid: int = -1
-    
+
     for i in range(0, len(cuum_sum_list)):
         this_cuum_sum = cuum_sum_list[i]
 
