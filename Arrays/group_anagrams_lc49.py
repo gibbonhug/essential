@@ -2,30 +2,14 @@
 # Leetcode 49
 # https://leetcode.com/problems/two-sum/
 
-def two_sum_lc167(nums: List[int], target: int) -> List[int]:
-    """Given an array of integers numbers that is already sorted in non-decreasing order, find two numbers such that they add up to a specific target number. Let these two numbers be numbers[index1] and numbers[index2] where 1 <= index1 < index2 <= numbers.length.
+def group_anagrams_lc49(self, strs: List[str]) -> List[List[str]]:    
+    """Given an array of strings strs, group the anagrams together. You can return the answer in any order.
 
-    Return the indices of the two numbers, index1 and index2, added by one as an integer array [index1, index2] of length 2.
+    An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.  
 
-    The tests are generated such that there is exactly one solution. You may not use the same element twice.
+    :param strs: The list of strings to search for group anagrams
+    :type strs: List[str]
 
-    Your solution must use only constant extra space.   
-
-    :param nums: The list of nums to search
-    :type nums: List[int]
-    :param nums: The target value
-    :type nums: int
-
-    :rtype: List[int]
-    :return: List containing the 2 indices in nums with values that sum to target
+    :rtype: List[List[str]
+    :return: List containing sublists which group anagrams together, eg [['cat', 'tac'], ['rat', 'tar', 'art']]
     """
-    left = 0
-    rite = len(nums) - 1
-    
-    while (left < rite):
-        if nums[left] < nums[rite]:
-            left += 1
-        elif nums[left] > nums[rite]:
-            rite -= 1
-        else:
-            return [left, rite]
