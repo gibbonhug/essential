@@ -1,5 +1,3 @@
-import re
-
 # Valid Palindrome
 # Leetcode 242
 # https://leetcode.com/problems/valid-palindrome/
