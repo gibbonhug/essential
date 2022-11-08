@@ -7,11 +7,11 @@ def valid_palindrome_lc125(s: str) -> bool:
 
     Given a string s, return true if it is a palindrome, or false otherwise.
 
-    :param s: The string to determine whether palindrome
-    :type s: str
-
     Time complexity: O(len(s))
     Space complexity: O(1)
+
+    :param s: The string to determine whether palindrome
+    :type s: str
 
     :rtype: bool
     :return: Boolean value corresponding to whether strings s is a palindrome, with regard to its alphanumeric chars
