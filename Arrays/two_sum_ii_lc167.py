@@ -16,8 +16,8 @@ def two_sum__ii_lc167(nums: list[int], target: int) -> list[int]:
 
     :param nums: The list of nums to search
     :type nums: list[int]
-    :param nums: The target value
-    :type nums: int
+    :param target: The target value
+    :type target: int
 
     :rtype: list[int]
     :return: list containing the 2 indices in nums with values that sum to target
