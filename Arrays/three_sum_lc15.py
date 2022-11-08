@@ -7,7 +7,7 @@ def three_sum_lc15(nums: list[int]) -> list[list[int]]:
 
     Notice that the solution set must not contain duplicate triplets.
 
-    Time complexity: O(nlogn) [sorting]
+    Time complexity: O(n^2)
     Space complexity: O(n) [disregard sorting]
 
     :param nums: The list of nums to search
