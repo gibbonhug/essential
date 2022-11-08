@@ -23,12 +23,12 @@ def top_k_frequent_elements(nums: list[int], k: int) -> list[int]:
     
     # then bucket sort with occs; index: occ; element: list of number/s with that count
     # ie, index 0: nums that appear 0 times; 1: nums that appear 1 time, etc
-    occ_to_num: list[int] = [[] for i in range(len(nums) + 1)]
+    occ_to_num: list[list[int]] = [[] for i in range(len(nums) + 1)]
 
     for num, occ in occ_map.items():
         occ_to_num[occ].append(num)
 
-    res = []
+    res: list[int] = []
 
     # go from highest -> lowest occurances until we find k nums
     for i in range(len(occ_to_num) - 1, 0, -1):
