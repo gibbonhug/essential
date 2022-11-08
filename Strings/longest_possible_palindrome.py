@@ -17,7 +17,7 @@ def longest_possible_palindrome(strs: list[str]) -> int:
     sames = set() # for 'aa' type strings
     diffs = set() # for 'ab' type strings
 
-    running_total = 0
+    running_total: int = 0
 
     for word in strs:
         # 'aa' type string

@@ -22,8 +22,8 @@ def two_sum__ii_lc167(nums: list[int], target: int) -> list[int]:
     :rtype: list[int]
     :return: list containing the 2 indices in nums with values that sum to target
     """
-    left = 0
-    rite = len(nums) - 1
+    left: int = 0
+    rite: int = len(nums) - 1
     
     while (left < rite):
         if nums[left] < nums[rite]:
