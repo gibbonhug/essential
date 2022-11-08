@@ -9,6 +9,9 @@ def rows_of_matrix(matrix: list[list[int]]) -> list[list[int]]:
     :rtype: list[list[int]]
     :return: List containing the rows of the matrix as lists.
     """
+    if not matrix:
+        return []
+
     list_of_rows: list[list[int]] = []
 
     # 1 version
