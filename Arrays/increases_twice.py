@@ -12,8 +12,8 @@ def increases_twice(nums: list[int]) -> bool:
     :rtype: bool
     :return: Boolean value of whether nums increases twice
     """
-    smallest = float('inf')
-    second_smallest = smallest
+    smallest: int | float = float('inf')
+    second_smallest: int | float = smallest
 
     for num in nums:
         if num <= smallest:

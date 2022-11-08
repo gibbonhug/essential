@@ -9,8 +9,8 @@ def product_of_array_except_self_lc238(nums: list[int]) -> list[int]:
 
     You must write an algorithm that runs in O(n) time and without using the division operation.
 
-    Time complexity: O(n
-    Space complexity: O(
+    Time complexity: O(n)
+    Space complexity: O(n) | O(1) per leetcode disregarding res array
 
     :param nums: The list of nums
     :type nums: list[int]
@@ -21,14 +21,17 @@ def product_of_array_except_self_lc238(nums: list[int]) -> list[int]:
     if not nums:
         return []
 
-    res: list = [1] * len(nums)
+    res: list[int] = [1] * len(nums)
 
-    prefix = 1
+    # prefix: product of array before this i element
+    prefix: int = 1
     for i in range(len(nums)):
-        res[i] = prefix
-        prefix *= nums[i]
+        res[i] = prefix # start prefix at 1
+        prefix *= nums[i] # for next loop
 
-    postfix = 1
+    # postfix: product of array after this i element
+    # (multply old prefix at res[i] by prefix to get product except self)
+    postfix: int = 1
     for i in range(len(nums) - 1, -1, -1):
         res[i] *= postfix
         postfix *= nums[i]
