@@ -2,7 +2,6 @@
 # Leetcode 49
 # https://leetcode.com/problems/group-anagrams/
 
-#unfinished
 def group_anagrams_lc49(strs: list[str]) -> list[list[str]]:    
     """Given an array of strings strs, group the anagrams together. You can return the answer in any order.
 
