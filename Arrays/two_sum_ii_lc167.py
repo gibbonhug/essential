@@ -26,9 +26,9 @@ def two_sum__ii_lc167(nums: list[int], target: int) -> list[int]:
     rite: int = len(nums) - 1
     
     while (left < rite):
-        if nums[left] < nums[rite]:
+        if nums[left] + nums[rite] < target:
             left += 1
-        elif nums[left] > nums[rite]:
+        elif nums[left] + nums[rite] > target:
             rite -= 1
         else:
             return [left, rite]
