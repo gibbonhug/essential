@@ -1,7 +1,7 @@
 # Basic Task: Iterate through the cols of a 2D Array (Matrix)
 
 def cols_of_matrix(matrix: list[list[int]]) -> list[list[int]]:
-    """Return a list containing the columns of a 2D matrix as lists. Order the columns from right to left ()
+    """Return a list containing the columns of a 2D matrix as lists. Order the columns in the order they appear from right->left in orignal matrix.
 
     :param matrix: The matrix to find cols from
     :type matrix: list[list[int]]
