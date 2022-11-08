@@ -2,12 +2,11 @@
 # Leetcode 347
 # https://leetcode.com/problems/top-k-frequent-elements/
 
-# Unfinished (update comments)
 def top_k_frequent_elements(nums: list[int], k: int) -> list[int]:
     """Given an integer array nums and an integer k, return the k most frequent elements. You may return the answer in any order.
 
-    Time complexity: O(
-    Space complexity: O(
+    Time complexity: O(n)
+    Space complexity: O(n) [new hashmap & array of len n]
 
     :param nums: The list of nums
     :type nums: list[int]
@@ -17,22 +16,24 @@ def top_k_frequent_elements(nums: list[int], k: int) -> list[int]:
     :rtype: list[int]
     :return: list of top k most frequent elements in nums
     """
-    occ_map = {}
+    # first count how many times each num occurs; map each num to its count
+    occ_map: {int: int} = {}
     for num in nums:
         occ_map[num] = 1 + occ_map.get(num, 0)
     
-    # index 0: nums that appear 0 times; 1: nums that appear 1 time, etc
-    count_to_num = [[] for i in range(len(nums) + 1)]
+    # then bucket sort with occs; index: occ; element: list of number/s with that count
+    # ie, index 0: nums that appear 0 times; 1: nums that appear 1 time, etc
+    occ_to_num: list[int] = [[] for i in range(len(nums) + 1)]
 
     for num, occ in occ_map.items():
-        count_to_num[occ].append(num)
+        occ_to_num[occ].append(num)
 
     res = []
 
-    for i in range(len(count_to_num) - 1, 0, -1):
-        for num in count_to_num[i]:
+    # go from highest -> lowest occurances until we find k nums
+    for i in range(len(occ_to_num) - 1, 0, -1):
+        for num in occ_to_num[i]:
             res.append(num)
         
         if len(res) == k:
                 return res
-    
