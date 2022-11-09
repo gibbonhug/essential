@@ -27,7 +27,7 @@ def valid_sudoku_lc36(board: list[list[int]]) -> bool:
         for col_num in range(9):
             this_num = board[row_num][col_num]
 
-            if board[row_num][col_num] == ".":
+            if this_num == ".":
                 continue
             
             if (
