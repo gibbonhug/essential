@@ -16,6 +16,8 @@ def make_the_string_great_lc1544(s: str) -> str:
 
     Notice that an empty string is also good.
 
+    (Essentially same problem as Remove All Adjacent Duplicates In String)
+
     Time complexity: O(n)
     Space complexity: O(n)
 
