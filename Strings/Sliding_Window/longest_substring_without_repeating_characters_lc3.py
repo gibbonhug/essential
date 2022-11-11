@@ -1,34 +1,40 @@
-# Best Time to Buy and Sell Stock
-# Leetcode 121
-# https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
+# Longest Substring Without Repeating Characters
+# Leetcode 3
+# https://leetcode.com/problems/longest-substring-without-repeating-characters/
 
-def best_time_to_buy_and_sell_stock_lc121(prices: list[int]) -> int:
-    """You are given an array prices where prices[i] is the price of a given stock on the ith day.
+def longest_substring_without_repeating_characters_lc3(s: str) -> int:
+    """Given a string s, find the length of the longest substring without repeating characters.
 
-    You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock.
+    A substring is a contiguous non-empty sequence of characters within a string.
 
-    Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0.
+    Time complexity: O(
+    Space complexity: O(
 
-    Time complexity: O(n)
-    Space complexity: O(1)
-
-    :param prices: The list of prices, with index corresponding to price on ith day
-    :type prices: list[int]
+    :param s: String
+    :type s: str
 
     :rtype: int
-    :return: Maximum profit which can be made
+    :return: Length of longest substring of s without repeating characters
     """
-    max_seen_profit: int = 0 # 'If you cannot achieve any profit, return 0.'
+    char_set: set(str) = set()
 
-    buying_day: int = 0
+    longest_len: int = 0
 
-    for selling_day in range(1, len(prices)):
-        # find lowest buying cost and remember this day
-        if prices[selling_day] < prices[buying_day]:
-            buying_day = selling_day
+    left: int = 0
 
-        profit: int = prices[selling_day] - prices[buying_day]
+    for rite in range(len(s)):
+        while s[rite] in char_set:
+            char_set.remove(s[left])
+            left += 1
+        
+        char_set.add(s[rite])
 
-        max_seen_profit = max(profit, max_seen_profit)
-    
-    return max_seen_profit
+        longest_len = max(longest_len, rite - left + 1)
+
+        # the longest possible substring starting from the 
+        # current char at left index is shorter than the longest
+        # string we have seen, so wasting time to continue
+        if (len(s) - left) < longest_len:
+            break
+
+    return longest_len
