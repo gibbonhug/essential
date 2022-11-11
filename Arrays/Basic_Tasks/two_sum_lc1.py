@@ -1,3 +1,5 @@
+# Basic Task: Determine whether an array contains a 'mirror' value / duplicate etc
+
 # Two Sum
 # Leetcode 1
 # https://leetcode.com/problems/two-sum/
