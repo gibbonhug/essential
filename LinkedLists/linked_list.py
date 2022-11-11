@@ -23,10 +23,10 @@ class Node:
         else:
             return f"({self.data})"
 
-# Singly-linked single-ended linked list which rememebers its length
+# Singly-linked single-ended linked list
 class LinkedList:
     """
-    Singly-linked single-ended linked list (with int data) which rememebers its length
+    Singly-linked single-ended linked list (with int data)
 
     ...
 
@@ -34,54 +34,101 @@ class LinkedList:
     ----------
     head : Node
         head node of the linked list
-    length : int
-        how many nodes the linked list holds
 
     Methods
     -------
-    add_at_beginning(new_head):
-        add a new head to the list, and return the new head
-
-    remove_first_node():
-        remove the current head of the list, and return the new head if it exists
-
-    calc_length():
-        manually calculate and return length of the list
+    prepend(value):
+        Insert a value as a new head node of the list, and return the new head
+    append(value):
+        Insert a value as the new tail node of the list, returning the new tail
+    shift():
+        Remove and return the head of the linked list
+    pop():
+        Remove and return the tail of the linked list
+    get_head():
+        Get the head node of the list
+    get_tail():
+        Get the tail node of the list
+    length():
+        Get the number of nodes in the linked list
+    is_empty():
+        Boolean value of whether the linked list is empty (contains 0 nodes)
     """
-    def __init__(self, head: Node):
+    def __init__(self, head: Optional[Node]):
         self.head = head
-        self.length = self.calc_length()
 
-    def add_at_beginning(self, new_head: Node) -> Node:
-        new_head.next = self.head
+    def prepend(self, value: int) -> Node:
+        new_head: Node = Node(value, self.head)
+
         self.head = new_head
-
-        self.length += 1
 
         return new_head
 
-    def remove_first_node(self) -> Optional[Node]:
-        if (self.head):
-            self.head = self.head.next
+    def append(self, value: int) -> Node:
+        if self.is_empty():
+            return self.prepend(value)
 
-            self.length -= 1
-
-            return self.head
+        new_tail: Node = Node(value)
+        old_tail: Node = self.get_tail()
         
-        return None
+        old_tail.next = new_tail
 
-    def calc_length(self) -> int:
-        length = 0
+        return new_tail
+
+    def shift(self) -> Optional[Node]:
+        if self.is_empty():
+            return None
+
+        old_head: Node = self.head
+
+        self.head = old_head.next
+
+        return old_head
+
+    def pop(self) -> Optional[Node]:
+        if self.is_empty():
+            return None
+
+        old_tail: Node = self.get_tail()
         curr_node = self.head
 
-        while (curr_node):
-            length += 1
+        while curr_node.next != old_tail:
             curr_node = curr_node.next
+
+        curr_node.next = None
+
+        return old_tail
+
+    def get_head(self) -> Optional[Node]:
+        return self.head
+
+    def get_tail(self) -> Optional[Node]:
+        if self.is_empty():
+            return None
+
+        curr_node: Node = self.head
+
+        while curr_node and curr_node.next:
+            curr_node = curr_node.next
+
+        return curr_node
+
+    def length(self) -> int:
+        length: int = 0
+
+        curr_node: Node = self.head
+
+        while curr_node:
+            curr_node = curr_node.next
+            length += 1
 
         return length
 
+    def is_empty(self) -> bool:
+        return True if self.head else False
+
     def __str__(self):
-        curr_node = self.head
+        curr_node: Node = self.head
         strings = []
 
         while curr_node:
