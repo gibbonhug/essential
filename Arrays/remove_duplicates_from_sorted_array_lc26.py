@@ -20,7 +20,7 @@ def remove_duplicates_from_sorted_array_lc26(nums: list[int]) -> int:
     :rtype: int
     :return: Number of 'unique' elements in nums (length of nums - # of numbers that are not the first instance of a particular number)
     """
-    unique_position: int = 1 # first element is 'unique'
+    unique_position: int = 1 # 0th element is 'unique'
     i: int = 0
 
     for i in range(len(nums) - 1):

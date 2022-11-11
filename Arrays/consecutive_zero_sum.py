@@ -1,3 +1,4 @@
+# Unfinished / Unoptimized [Consider find starting not from 0th index while building list]
 def consecutive_zero_sum(nums: list[int]) -> int:
     """Given an integer array nums, determine the length of the longest sequence of consecutive ints that sum to zero. If no sequences sum to 0 in nums, return -1
 
