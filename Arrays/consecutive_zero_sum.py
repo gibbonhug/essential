@@ -1,4 +1,4 @@
-# Unfinished / Unoptimized [Consider find starting not from 0th index while building list]
+# Don't think sliding window would optimize problem further but not certain
 def consecutive_zero_sum(nums: list[int]) -> int:
     """Given an integer array nums, determine the length of the longest sequence of consecutive ints that sum to zero. If no sequences sum to 0 in nums, return -1
 
@@ -7,7 +7,7 @@ def consecutive_zero_sum(nums: list[int]) -> int:
     [0, 0, 0] -> 3: The sequence from i=0 to i=2 is the longest sequence which sums to 0.
     [1] -> -1: No sequence in this array sums to 0
 
-    Time complexity: O(n) [iterate multiple times thru entire arrays of length n]
+    Time complexity: O(n) [iterate thru entire array]
     Space complexity: O(n) [new hashmap and array]
 
     :param nums: The list of nums
@@ -22,10 +22,13 @@ def consecutive_zero_sum(nums: list[int]) -> int:
 
     # two types of consecutive 0 sums: those which start from beginning of list and those which do not.
 
-    # first build cuum sum array while finding longest cons zero sum which starts from beginning of list.
+    # build cuum sum array while finding longest cons zero sum which starts from beginning of list.
     # building the cuum sum array is equivalent to cumulative_sum_array in Arrays/Basic_Tasks.
     cuum_sum_list: list[int] = [nums[0]]
     longest_zero_sum_from_beg: int = 1 if cuum_sum_list[0] == 0 else -1
+
+    seen_sum_map: {int: int} = {}
+    longest_zero_sum_from_mid: int = -1
 
     for i in range(1, len(nums)):
         cuum_sum_here = nums[i] + cuum_sum_list[i-1]
@@ -33,24 +36,17 @@ def consecutive_zero_sum(nums: list[int]) -> int:
 
         if cuum_sum_here == 0:
             longest_zero_sum_from_beg = i+1 # 0 indexed array, length will be index +1
-
-    # next find consecutive 0 sums which do not start from index 0.
-    # (these can be found by summing between equal numbers in cuum_sum_list: ie from [1, 3, 1] summing from these indices
-    # gives a consecutive zero sum of length 3)
-    # finding the left repeating number in this way is nearly identical to contains_duplicate also in Arrays/Basic_Tasks.
-    seen_sum_map: {int: int} = {}
-    longest_zero_sum_from_mid: int = -1
-
-    for i in range(0, len(cuum_sum_list)):
-        this_cuum_sum = cuum_sum_list[i]
-
-        if this_cuum_sum in seen_sum_map:
-            this_length = i - seen_sum_map.get(this_cuum_sum)
-            # only adding cuum sum into the map once (below else statement) will eliminate issues of ex. multiple cuum_sums surrounded by same number
-            longest_zero_sum_from_mid = max(this_length, longest_zero_sum_from_mid) 
-
+        # find consecutive 0 sums which do not start from index 0.
+        # (these can be found by summing between equal numbers in cuum_sum_list: ie from [1, 3, 1] summing from these indices
+        # gives a consecutive zero sum of length 3)
+        # finding the left repeating number in this way is nearly identical to contains_duplicate also in Arrays/Basic_Tasks.
         else:
-            seen_sum_map[this_cuum_sum] = i
-    
+            if cuum_sum_here in seen_sum_map:
+                this_length = i - seen_sum_map.get(this_cuum_sum)
+                # only adding cuum sum into the map once (below else statement) will eliminate issues of ex. multiple cuum_sums surrounded by same number
+                longest_zero_sum_from_mid = max(this_length, longest_zero_sum_from_mid) 
+            else:
+                seen_sum_map[this_cuum_sum] = i
+
     # now return the larger of the two sum lengths:
-    return max(longest_zero_sum_from_beg, longest_zero_sum_from_mid)
+    return max(longest_zero_sum_from_beg, longest_zero_sum_from_mid)    
