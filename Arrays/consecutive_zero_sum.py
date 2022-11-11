@@ -23,8 +23,6 @@ def consecutive_zero_sum(nums: list[int]) -> int:
 
     # two types of consecutive 0 sums: those which start from beginning of list and those which do not.
 
-    # build cuum sum array while finding longest cons zero sum which starts from beginning of list.
-    # building the cuum sum array is equivalent to cumulative_sum_array in Arrays/Basic_Tasks.
     cuum_sum: int = nums[0]
     longest_zero_sum_from_beg: int = 1 if cuum_sum == 0 else -1
 
