@@ -7,8 +7,8 @@ def longest_substring_without_repeating_characters_lc3(s: str) -> int:
 
     A substring is a contiguous non-empty sequence of characters within a string.
 
-    Time complexity: O(
-    Space complexity: O(
+    Time complexity: O(n)
+    Space complexity: O(n)
 
     :param s: String
     :type s: str
