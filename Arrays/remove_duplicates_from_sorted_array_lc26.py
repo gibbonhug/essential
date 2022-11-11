@@ -28,7 +28,4 @@ def remove_duplicates_from_sorted_array_lc26(nums: list[int]) -> int:
             nums[unique_position] = nums[i+1]
             unique_position += 1
 
-    while i < len(nums) - 1:
-        i += 1
-
     return unique_position
