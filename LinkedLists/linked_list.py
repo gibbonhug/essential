@@ -37,21 +37,21 @@ class LinkedList:
 
     Methods
     -------
-    prepend(value):
+    - prepend(value):
         Insert a value as a new head node of the list, and return the new head
-    append(value):
+    - append(value):
         Insert a value as the new tail node of the list, returning the new tail
-    shift():
+    - shift():
         Remove and return the head of the linked list
-    pop():
+    - pop():
         Remove and return the tail of the linked list
-    get_head():
+    - get_head():
         Get the head node of the list
-    get_tail():
+    - get_tail():
         Get the tail node of the list
-    length():
+    - length():
         Get the number of nodes in the linked list
-    is_empty():
+    - is_empty():
         Boolean value of whether the linked list is empty (contains 0 nodes)
     """
     def __init__(self, head: Optional[Node]):
