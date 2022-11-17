@@ -1,4 +1,4 @@
-from linked_list import Node
+from Implementations.linked_list import Node
 
 # Middle Of The Linked List
 # Leetcode 806
@@ -26,4 +26,4 @@ def middle_of_the_linked_list_lc806(head: Node) -> Node:
         slow_node = slow_node.next
         fast_node = fast_node.next.next
     
-    return slow_node 
+    return slow_node

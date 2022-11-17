@@ -1,5 +1,5 @@
 from typing import Optional
-from linked_list import Node
+from Implementations.linked_list import Node
 
 # Reverse Linked List
 # Leetcode 206

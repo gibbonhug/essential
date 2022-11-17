@@ -1,4 +1,4 @@
-from linked_list import Node
+from Implementations.linked_list import Node
 from typing import Optional
 
 # Linked List Cycle
