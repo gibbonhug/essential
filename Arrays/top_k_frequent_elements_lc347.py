@@ -10,8 +10,8 @@ def top_k_frequent_elements(nums: list[int], k: int) -> list[int]:
 
     :param nums: The list of nums
     :type nums: list[int]
-    :param nums: The top k frequent elements to return [ie k = 2: return 1st most frequent and 2nd most frequent]
-    :type nums: int
+    :param k: The top k frequent elements to return [ie k = 2: return 1st most frequent and 2nd most frequent]
+    :type k: int
 
     :rtype: list[int]
     :return: list of top k most frequent elements in nums
