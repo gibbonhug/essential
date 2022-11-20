@@ -1,3 +1,7 @@
+from typing import Optional
+
+# unfinished
+
 # Invert Binary Tree
 # Leetcode 226
 # https://leetcode.com/problems/invert-binary-tree/
