@@ -23,7 +23,6 @@ def longest_consecutive_sequence_lc128(nums: list[int]) -> int:
     for num in nums:
         if num - 1 not in nums_set:
             this_seq_len: int = 1
-            next_num: int = num + 1
 
             while num + this_seq_len in nums_set:
                 this_seq_len += 1
