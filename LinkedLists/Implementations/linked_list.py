@@ -43,6 +43,8 @@ class LinkedList:
         Insert a value as the new tail node of the list, returning the new tail
     - shift():
         Remove and return the head of the linked list
+    - decapitate():
+        Same as shift()
     - pop():
         Remove and return the tail of the linked list
     - get_head():
@@ -84,6 +86,9 @@ class LinkedList:
         self.head = old_head.next
 
         return old_head
+
+    def decapitate(self) -> Optional[Node]:
+        return self.shift()
 
     def pop(self) -> Optional[Node]:
         if self.is_empty():
