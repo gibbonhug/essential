@@ -11,7 +11,7 @@ def remove_duplicates_from_sorted_array_lc26(nums: list[int]) -> int:
 
     Do not allocate extra space for another array. You must do this by modifying the input array in-place with O(1) extra memory.
 
-    Time complexity: O(n^2)
+    Time complexity: O(n)
     Space complexity: O(1)
 
     :param nums: The list of nums to 'remove duplicates' from
