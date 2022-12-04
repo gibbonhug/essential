@@ -2,6 +2,8 @@
 
 def merge_sort(arr: list[int]) -> None:
     """Performs merge sort in-place on parameter list of integers.
+
+    See: Merge Two Arrays in Basic Tasks of Arrays
     
     Time complexity: O(nlogn)
     Space complexity: O(n)
