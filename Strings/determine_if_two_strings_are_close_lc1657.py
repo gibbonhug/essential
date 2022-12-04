@@ -45,6 +45,4 @@ def determine_if_two_strings_are_close_lc1657(word1: str, word2: str) -> bool:
         return False
 
     # Testing o_counts == each other will also now test Operation 1 after if statement
-    # [Consider operation 1 to be a specfic type of operation 2, where 
-    # both chars to be transformed have same occurance]
     return w1_o_count == w2_o_count
