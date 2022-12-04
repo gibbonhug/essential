@@ -1,6 +1,6 @@
 from typing import Optional
 
-# unfinished
+# unfinished (add more ways to solve)
 
 # Invert Binary Tree
 # Leetcode 226
