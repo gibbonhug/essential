@@ -22,6 +22,6 @@ def max_value_before_index(nums: list[int]) -> list[int]:
     res: list[int] = [0] * len(nums)
 
     for i in range(1, len(nums)):
-        res[i] = max(nums[i-1], nums[i-1])
+        res[i] = max(nums[i-1], res[i-1])
 
     return res
