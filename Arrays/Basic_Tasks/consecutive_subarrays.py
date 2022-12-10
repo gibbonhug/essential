@@ -1,4 +1,4 @@
-# Basic Task: Iterate through an array, pairing every element with all consecutive successive elements
+# Basic Task: Iterate through an array, pairing every element with all consecutive elements
 
 def consecutive_subarrays_by_element_flat(arr: list[int]) -> list[int]:
     """Return a list containing every consecutive subarray of parameter list, ordered by the first element in the subarray.
