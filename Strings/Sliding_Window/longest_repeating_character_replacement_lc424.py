@@ -52,7 +52,7 @@ def longest_repeating_character_replacement_lc424_bruteforce(s: str, k: int) -> 
             
             # length of this substring + 1: include first char
             this_len: int = j + 1
-            # analying this substring will not increase our max, so ignore 
+            # analyzing this substring will not increase our max, so ignore 
             # and go to next
             if this_len < max_len:
                 continue
