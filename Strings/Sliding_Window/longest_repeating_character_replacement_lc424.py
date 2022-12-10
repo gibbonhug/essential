@@ -52,17 +52,18 @@ def longest_repeating_character_replacement_lc424_bruteforce(s: str, k: int) -> 
             
             # length of this substring + 1: include first char
             this_len: int = j + 1
+
             # analyzing this substring will not increase our max, so ignore 
             # and go to next
-            if this_len < max_len:
+            if this_len <= max_len:
                 continue
 
-            # find max occ
+            # find occ of char which appears most often in this substring
             len_max_occ: int = this_map[max(this_map, key=this_map.get)]
 
             num_chars_to_replace: int = this_len - len_max_occ
 
             if num_chars_to_replace <= k:
-                max_len = max(max_len, this_len)
+                max_len = this_len # already know this_len is > than existing max_len
 
     return max_len
