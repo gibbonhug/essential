@@ -7,7 +7,7 @@ def longest_repeating_character_replacement_lc424(s: str, k: int) -> int:
 
     Return the length of the longest substring containing the same letter you can get after performing the above operations.
 
-    Time complexity: O(n^2)
+    Time complexity: O(n)
     Space complexity: O(1)
 
     :param prices: The string to perform operation on
@@ -27,7 +27,7 @@ def longest_repeating_character_replacement_lc424_bruteforce(s: str, k: int) -> 
     Brute Force Solution
 
     Time complexity: O(n^2)
-    Space complexity: O(1)
+    Space complexity: O(n)
 
     :param prices: The string to perform operation on
     :type prices: str
