@@ -21,7 +21,7 @@ def product_of_array_except_self_lc238(nums: list[int]) -> list[int]:
     if not nums:
         return []
 
-    res: list[int] = [1] * len(nums)
+    res: list[int] = [1 for i in range(len(nums))]
 
     # prefix: product of array before this i element
     prefix: int = 1
