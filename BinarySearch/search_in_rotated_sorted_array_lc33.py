@@ -11,8 +11,8 @@ def search_in_rotated_sorted_array_lc33(nums: list[int], target: int) -> int:
 
     You must write an algorithm with O(log n) runtime complexity.
 
-    Time Complexity:
-    Space Complexity:
+    Time Complexity: O(logn)
+    Space Complexity: O(1)
 
     :param nums: The rotated sorted list of nums to search
     :type nums: list[int]
