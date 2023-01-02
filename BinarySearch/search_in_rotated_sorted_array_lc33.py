@@ -22,3 +22,40 @@ def search_in_rotated_sorted_array_lc33(nums: list[int], target: int) -> int:
     :rtype: int
     :return: The index of target in nums, if target is in nums, else -1
     """
+    # indices
+    l: int = 0
+    r: int = len(nums) - 1
+    
+    # Binary Search (Searches/binary_search)
+    while l <= r:
+        mid: int = l  + ((r - l) // 2)
+        
+        if nums[mid] == target:
+            return mid
+        
+        # search rest of array
+
+        # mid is within left sorted portion
+        elif nums[mid] >= nums[l]:
+            # target is within left sorted portion (target is not mid):
+            # move r to the -1 of mid
+            if nums[l] <= target <= nums[mid]:
+                r = mid - 1
+            # target is not to the left of mid: 
+            # move l to +1 of mid
+            else:
+                l = mid + 1
+                
+        # mid is within right sorted portion
+        else:
+            # target is within right sorted portion to right of mid:
+            # move l to +1 of mid
+            if nums[mid] <= target <= nums[r]:
+                l = mid + 1
+            # target is not to the right of mid:
+            # move r to -1 of mid
+            else:
+                r = mid - 1
+                
+    # target is not in arr
+    return -1 
