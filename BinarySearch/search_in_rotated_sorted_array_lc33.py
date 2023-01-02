@@ -39,7 +39,7 @@ def search_in_rotated_sorted_array_lc33(nums: list[int], target: int) -> int:
         elif nums[mid] >= nums[l]:
             # target is within left sorted portion (target is not mid):
             # move r to the -1 of mid
-            if nums[l] <= target <= nums[mid]:
+            if nums[l] <= target < nums[mid]:
                 r = mid - 1
             # target is not to the left of mid: 
             # move l to +1 of mid
