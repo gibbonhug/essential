@@ -14,18 +14,20 @@ def rows_of_matrix(matrix: list[list[int]]) -> list[list[int]]:
 
     list_of_rows: list[list[int]] = []
 
-    # 1 version
+    # 1 version: Loop
     for row in matrix:
+        #  Problem-specific code here
         list_of_rows.append(row)
-    
-    # reset
+
     list_of_rows = []
 
-    # 2 version
-    num_rows: int = len(matrix)
-
-    for i in range(num_rows):
+    # 2 version: Another loop
+    for i in range(len(matrix)):
         this_row = matrix[i]
+        # Problem-specific code here
         list_of_rows.append(this_row)
+
+    # 3 version: List comprehension
+    list_of_rows = [row for row in matrix]
 
     return list_of_rows
