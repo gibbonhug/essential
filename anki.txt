@@ -29,5 +29,7 @@ Merge Two Sorted Lists; linked_lists easy
 Diameter of Binary Tree; binary_trees easy
 
 Comments (do not put semicolons or quotes within comments):
-This file can be used to review key problems with spaced repetition by importing it to Anki
+This file can be used to review key problems with spaced repetition by importing to Anki
 https://docs.ankiweb.net/importing.html
+Spaced repetition will ensure you do not forget techniques
+When the card with a problem comes up on Anki, see if you can re-implement the best algorithmic solution, and that you are able to explain why it is better than other correct algorithms
