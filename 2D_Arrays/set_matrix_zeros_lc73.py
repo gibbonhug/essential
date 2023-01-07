@@ -2,6 +2,8 @@
 # Leetcode 73
 # https://leetcode.com/problems/set-matrix-zeroes/
 
+# Unfinished (add from paper notes)
+
 def set_matrix_zeros_lc73(matrix: list[list[int]]) -> None:
     """Given an m x n integer matrix matrix, if an element is 0, set its entire row and column to 0's.
 
