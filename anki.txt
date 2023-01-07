@@ -1,0 +1,28 @@
+Valid Sudoku; 2d_arrays medium
+Contains Duplicate; arrays easy
+Two Sum; arrays easy
+Best Time to Buy And Sell Stock; arrays easy
+Group Anagrams; arrays medium
+Top K Frequent Elements; arrays medium
+Two Sum II Array Is Sorted; arrays medium
+3Sum; arrays medium
+Container With Most Water; arrays medium
+Trapping Rain Water; arrays medium
+Product of Array Except Self; arrays medium
+Longest Consecutive Sequence; arrays medium
+Valid Anagram; strings easy
+Valid Palindrome; strings easy
+Encode And Decode Strings; strings medium
+Longest Substring Without Repeating Characters; strings medium
+Longest Repeating Character Replacement; strings medium
+Permutation In String; strings medium
+Valid Parenthesis; stacks easy
+Evaluate Reverse Polish Notation; stacks medium
+Generate Parenthesis; stacks medium
+Binary Search; binary_searches easy
+Search a 2D Matrix; binary_searches medium
+Find Minimum In Rotated Sorted Array; binary_searches medium
+Search In Rotated Sorted Array; binary_searches medium
+Reverse Linked List; linked_lists easy
+Merge Two Sorted Lists; linked_lists easy
+Diameter of Binary Tree; binary_trees easy
