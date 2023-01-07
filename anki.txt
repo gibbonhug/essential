@@ -27,3 +27,7 @@ Koko Eating Bananas; binary_searches medium
 Reverse Linked List; linked_lists easy
 Merge Two Sorted Lists; linked_lists easy
 Diameter of Binary Tree; binary_trees easy
+
+Comments (do not put semicolons or quotes within comments):
+This file can be used to review key problems with spaced repetition by importing it to Anki
+https://docs.ankiweb.net/importing.html
