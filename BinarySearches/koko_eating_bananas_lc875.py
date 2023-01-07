@@ -11,7 +11,7 @@ def koko_eating_bananas_lc875(piles: list[int], h: int) -> int:
 
 Return the minimum integer k such that she can eat all the bananas within h hours.
 
-Time Complexity: O()
+Time Complexity: O(n*log(max(piles)))
 Space Complexity: O(1)
 
 :param piles: The list of piles Koko wants to eat as slowly as possible
