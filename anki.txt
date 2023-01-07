@@ -23,6 +23,7 @@ Binary Search; binary_searches easy
 Search a 2D Matrix; binary_searches medium
 Find Minimum In Rotated Sorted Array; binary_searches medium
 Search In Rotated Sorted Array; binary_searches medium
+Koko Eating Bananas; binary_searches medium
 Reverse Linked List; linked_lists easy
 Merge Two Sorted Lists; linked_lists easy
 Diameter of Binary Tree; binary_trees easy
