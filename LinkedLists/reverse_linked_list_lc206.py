@@ -17,7 +17,7 @@ def reverse_linked_list_lc206(head: Optional[Node]) -> Optional[Node]:
     :rtype: Optional[Node]
     :return: The new head of the reverse linked list (tail of the old list)
     """
-    prev_node: None
+    prev_node: ListNode = None
     this_node: ListNode = head
 
     while (this_node):
