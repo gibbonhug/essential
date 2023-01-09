@@ -1,1 +1,2 @@
 - 'Tag' algorithms with techniques used to solve
+- Add Basic Tasks to anki.txt
