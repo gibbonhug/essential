@@ -17,6 +17,7 @@ Longest Substring Without Repeating Characters; strings medium
 Longest Repeating Character Replacement; strings medium
 Permutation In String; strings medium
 Valid Parenthesis; stacks easy
+Daily Temperatures; stacks medium
 Evaluate Reverse Polish Notation; stacks medium
 Generate Parenthesis; stacks medium
 Binary Search; binary_searches easy
