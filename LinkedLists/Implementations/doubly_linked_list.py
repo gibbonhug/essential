@@ -147,7 +147,7 @@ class LinkedList:
         return length
 
     def is_empty(self) -> bool:
-        return True if self.head else False
+        return False if self.head else True
 
     def __str__(self):
         curr_node: Node = self.head
