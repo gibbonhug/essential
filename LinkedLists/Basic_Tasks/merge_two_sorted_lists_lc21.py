@@ -1,6 +1,8 @@
 from Implementations.linked_list import Node
 from typing import Optional
 
+# Basic Task: Merge two sorted linked lists together
+
 # Middle Of The Linked List
 # Leetcode 21
 # https://leetcode.com/problems/merge-two-sorted-lists/

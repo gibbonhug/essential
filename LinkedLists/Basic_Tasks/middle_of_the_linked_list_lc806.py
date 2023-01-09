@@ -1,5 +1,7 @@
 from Implementations.linked_list import Node
 
+# Basic task: Find the middle node of a linked list with the fast/slow 2-ptr technique
+
 # Middle Of The Linked List
 # Leetcode 806
 # https://leetcode.com/problems/middle-of-the-linked-list/
