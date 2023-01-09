@@ -40,10 +40,14 @@ class LinkedList:
 
     Methods
     -------
-    - prepend(value):
-        Insert a value as a new head node of the list, and return the new head
-    - append(value):
-        Insert a value as the new tail node of the list, returning the new tail
+    - prepend(node):
+        Insert a node as a new head node of the list, and return the new head
+    - append(node):
+        Insert a node as the new tail node of the list, returning the new tail
+    - add_as_head(value):
+        Insert an int value as a new head node of the list, and return the new head
+    - add(value):
+        Insert an int value as the new tail node of the list, returning the new tail
     - shift():
         Remove and return the head of the linked list
     - decapitate():
@@ -54,6 +58,8 @@ class LinkedList:
         Get the head node of the list
     - get_tail():
         Get the tail node of the list
+    - search(value):
+        Returns a bool of whether int value appears as data within list
     - length():
         Get the number of nodes in the linked list
     - is_empty():
@@ -62,34 +68,41 @@ class LinkedList:
     def __init__(self, head: Optional[Node]):
         self.head = head
 
-    def prepend(self, value: int) -> Node:
+    def prepend(self, node: Node) -> Node:
+        # Set prev and next to clear whatever used to have
+        node.prev = None
+        node.next = self.head
+
         if self.is_empty():
-            new_head: Node = Node(value, None, self.head)
+            self.head = node
 
-            self.head = new_head
-
-            return new_head
-
-        new_head: Node = Node(value, None, self.head)
+            return node
 
         old_head: Node = self.head
-        old_head.prev = new_head
+        old_head.prev = node
         
-        self.head = new_head
+        self.head = node
 
-        return new_head
+        return node
 
-
-    def append(self, value: int) -> Node:
+    def append(self, node: Node) -> Node:
         if self.is_empty():
             return self.prepend(value)
 
-        new_tail: Node = Node(value, old_tail)
         old_tail: Node = self.get_tail()
-        
-        old_tail.next = new_tail
 
-        return new_tail
+        node.prev = old_tail
+        node.next = None
+
+        old_tail.next = node
+
+        return node
+
+    def add_as_head(self, value: int) -> Node:
+        return prepend(Node(value))
+
+    def add(self, value: int) -> Node:
+        return append(Node(value))
 
     def shift(self) -> Optional[Node]:
         if self.is_empty():
@@ -134,6 +147,21 @@ class LinkedList:
             curr_node = curr_node.next
 
         return curr_node
+
+    def search(self, value) -> bool:
+        if self.is_empty():
+            return False
+
+        curr_node: Node = self.head
+
+        while curr_node:
+            if curr_node.data == value:
+                return True
+
+            curr_node = curr_node.next
+
+        # Searched entire list
+        return False
 
     def length(self) -> int:
         length: int = 0
